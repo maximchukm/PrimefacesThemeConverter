@@ -13,14 +13,16 @@ import java.io.File;
 public class Launcher {
 
     public static void main(String[] args) {
-        try {
-            ThemerollerZipParser parser = new ThemerollerZipParser192(new File(args[0]));
-            if (parser.validate()) {
-                parser.parse();
-                System.out.println(parser.getDefaultThemeName());
+        if (args.length == 1) {
+            try {
+                ThemerollerZipParser parser = new ThemerollerZipParser192(new File(args[0]));
+                if (parser.validate()) {
+                    parser.parse();
+                    System.out.println(parser.getDefaultThemeName());
+                }
+            } catch (Exception ex) {
+                ex.printStackTrace();
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
         }
     }
 }
