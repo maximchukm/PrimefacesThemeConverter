@@ -53,9 +53,9 @@ public class ThemerollerZipParser192 extends AbstractThemerollerZipParser implem
                 int startInd = line.indexOf("url(") + 4;
                 int endInd = line.indexOf(")");
                 String imageName = line.substring(startInd, endInd);
-                StringBuilder imageNameBuilder = new StringBuilder("#{resources['primefaces-");
+                StringBuilder imageNameBuilder = new StringBuilder("\"#{resources['primefaces-");
                 imageNameBuilder.append(getDefaultThemeName()).append(":");
-                imageNameBuilder.append(imageName).append("']}");
+                imageNameBuilder.append(imageName).append("']}\"");
                 line = line.replace(imageName, imageNameBuilder.toString());
             }
             cssBuilder.append(line);
@@ -71,6 +71,6 @@ public class ThemerollerZipParser192 extends AbstractThemerollerZipParser implem
     @Override
     public String getDefaultThemeName() {
         String[] nameParts = cssEntry.getName().split("/");
-        return nameParts[nameParts.length - 2];
+        return nameParts[nameParts.length - 2].toLowerCase();
     }
 }

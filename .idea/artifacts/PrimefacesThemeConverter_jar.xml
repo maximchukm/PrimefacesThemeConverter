@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="PrimefacesThemeConverter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/PrimefacesThemeConverter_jar</output-path>
+    <root id="archive" name="ptc.jar">
+      <element id="module-output" name="PrimefacesThemeConverter" />
+    </root>
+  </artifact>
+</component>

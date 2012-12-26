@@ -19,10 +19,14 @@ public class Launcher {
                 ThemerollerZipParser parser = new ThemerollerZipParser192(new File(args[0]));
                 if (parser.validate()) {
                     if (parser.parse()) {
-                        System.out.println(parser.getDefaultThemeName());
+                        System.out.println("Theme: " + parser.getDefaultThemeName());
                         ThemeJarBuilder jarBuilder = new ThemeJarBuilder(parser.getCss(), parser.getImages());
                         jarBuilder.build("outTheme", parser.getDefaultThemeName());
+                    } else {
+                        System.err.println("Invalid themeroller zip");
                     }
+                } else {
+                    System.err.println("Unsupported themeroller version");
                 }
             } catch (Exception ex) {
                 ex.printStackTrace();
