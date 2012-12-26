@@ -1,5 +1,7 @@
 package com.maximchuk.ptc.parser;
 
+import com.maximchuk.ptc.entity.FileEntity;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -22,24 +24,34 @@ public abstract class AbstractThemerollerZipParser implements ThemerollerZipPars
         zipFile = new ZipFile(file);
     }
 
-    protected abstract String getVersion();
-
     @Override
     public boolean validate() {
         return zipFile.entries().nextElement().getName().contains(getVersion());
     }
 
     @Override
-    public InputStream getCssInputStream() throws IOException {
-        return zipFile.getInputStream(cssEntry);
+    public FileEntity getCss() throws IOException {
+        InputStream is = zipFile.getInputStream(cssEntry);
+        byte[] data = new byte[is.available()];
+        is.read(data);
+        return prepareCss(data);
     }
 
     @Override
-    public List<InputStream> getImagesInputStreamList() throws IOException {
-        List<InputStream> inputStreamList = new ArrayList<InputStream>();
+    public List<FileEntity> getImages() throws IOException {
+        List<FileEntity> images = new ArrayList<FileEntity>();
         for (ZipEntry imageEntry: imagesEntryList) {
-            inputStreamList.add(zipFile.getInputStream(imageEntry));
+            InputStream is = zipFile.getInputStream(imageEntry);
+            byte[] data = new byte[is.available()];
+            is.read(data);
+            String[] filenameParts = imageEntry.getName().split("/");
+            images.add(new FileEntity(filenameParts[filenameParts.length - 1], data));
+            is.close();
         }
-        return inputStreamList;
+        return images;
     }
+
+    protected abstract FileEntity prepareCss(byte[] data) throws IOException;
+
+    protected abstract String getVersion();
 }

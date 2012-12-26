@@ -1,7 +1,8 @@
 package com.maximchuk.ptc.parser;
 
+import com.maximchuk.ptc.entity.FileEntity;
+
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -14,9 +15,9 @@ public interface ThemerollerZipParser {
 
     public boolean parse();
 
-    public InputStream getCssInputStream() throws IOException;
+    public FileEntity getCss() throws IOException;
 
-    public List<InputStream> getImagesInputStreamList() throws IOException;
+    public List<FileEntity> getImages() throws IOException;
 
     public String getDefaultThemeName();
 }

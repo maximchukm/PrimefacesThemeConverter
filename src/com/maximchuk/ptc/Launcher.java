@@ -1,6 +1,7 @@
 package com.maximchuk.ptc;
 
 
+import com.maximchuk.ptc.handle.ThemeJarBuilder;
 import com.maximchuk.ptc.parser.ThemerollerZipParser;
 import com.maximchuk.ptc.parser.impl.ThemerollerZipParser192;
 
@@ -17,8 +18,11 @@ public class Launcher {
             try {
                 ThemerollerZipParser parser = new ThemerollerZipParser192(new File(args[0]));
                 if (parser.validate()) {
-                    parser.parse();
-                    System.out.println(parser.getDefaultThemeName());
+                    if (parser.parse()) {
+                        System.out.println(parser.getDefaultThemeName());
+                        ThemeJarBuilder jarBuilder = new ThemeJarBuilder(parser.getCss(), parser.getImages());
+                        jarBuilder.build("outTheme", parser.getDefaultThemeName());
+                    }
                 }
             } catch (Exception ex) {
                 ex.printStackTrace();

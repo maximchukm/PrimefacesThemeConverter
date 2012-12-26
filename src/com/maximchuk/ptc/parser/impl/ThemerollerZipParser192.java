@@ -1,10 +1,10 @@
 package com.maximchuk.ptc.parser.impl;
 
+import com.maximchuk.ptc.entity.FileEntity;
 import com.maximchuk.ptc.parser.AbstractThemerollerZipParser;
 import com.maximchuk.ptc.parser.ThemerollerZipParser;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 
@@ -40,6 +40,32 @@ public class ThemerollerZipParser192 extends AbstractThemerollerZipParser implem
             }
         }
         return cssEntry != null && !imagesEntryList.isEmpty();
+    }
+
+    @Override
+    protected FileEntity prepareCss(byte[] cssData) throws IOException {
+        ByteArrayInputStream is = new ByteArrayInputStream(cssData);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        StringBuilder cssBuilder = new StringBuilder();
+        while (reader.ready()) {
+            String line = reader.readLine();
+            if (line.contains("url(")) {
+                int startInd = line.indexOf("url(") + 4;
+                int endInd = line.indexOf(")");
+                String imageName = line.substring(startInd, endInd);
+                StringBuilder imageNameBuilder = new StringBuilder("#{resources['primefaces-");
+                imageNameBuilder.append(getDefaultThemeName()).append(":");
+                imageNameBuilder.append(imageName).append("']}");
+                line = line.replace(imageName, imageNameBuilder.toString());
+            }
+            cssBuilder.append(line);
+        }
+        reader.close();
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os));
+        writer.write(cssBuilder.toString());
+        writer.close();
+        return new FileEntity("theme.css", os.toByteArray());
     }
 
     @Override
