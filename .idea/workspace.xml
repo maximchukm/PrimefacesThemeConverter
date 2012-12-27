@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/impl/ThemerollerZipParser192.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/impl/ThemerollerZipParser192.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/AbstractThemerollerZipParser.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/AbstractThemerollerZipParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrimefacesThemeConverter.iws" />
@@ -11,19 +13,15 @@
     <file path="/Class.txt.ft" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356464870709" ignored="false" />
     <file path="/Enum.txt.ft" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356464887311" ignored="false" />
     <file path="/Interface.txt.ft" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356464892933" ignored="false" />
-    <file path="/Launcher.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356533819809" ignored="false" />
+    <file path="/Launcher.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356637853017" ignored="false" />
     <file path="/ThemerollerZipParser.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356517896148" ignored="false" />
-    <file path="/fragment.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356529559731" ignored="false" />
-    <file path="/ThemerollerZipParser192.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356530234293" ignored="false" />
-    <file path="/AbstractThemerollerZipParser.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356519662068" ignored="false" />
-    <file path="/Dummy.txt" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356534494106" ignored="false" />
-    <file path="/ThemeJarBuilder.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356533438059" ignored="false" />
+    <file path="/fragment.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356637656278" ignored="false" />
+    <file path="/ThemerollerZipParser192.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356520222879" ignored="false" />
+    <file path="/AbstractThemerollerZipParser.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356638205554" ignored="false" />
+    <file path="/Dummy.txt" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356634484464" ignored="false" />
+    <file path="/ThemeJarBuilder.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356637754746" ignored="false" />
     <file path="/ImageEntity.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356517829034" ignored="false" />
-    <file path="$PROJECT_DIR$/../eFarmer/trunk/MO/ViewController/pom.xml" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356534777731" ignored="false" />
-    <file path="/pom.xml" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356528982840" ignored="false" />
-    <file path="$PROJECT_DIR$/../eFarmer/trunk/MO/DataModel/src/main/java/com/km/orgfrm/datamodel/entity/users/KmPrimeSkin.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356529162918" ignored="false" />
-    <file path="$PROJECT_DIR$/../eFarmer/trunk/MO/SOAPClient/target/SOAPClient-1.0.1-alpha1-SNAPSHOT/META-INF/jax-ws-catalog.xml" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356534216934" ignored="false" />
-    <file path="$PROJECT_DIR$/../eFarmer/trunk/MO/SOAPClient/target/SOAPClient-1.0.1-alpha1-SNAPSHOT/META-INF/wsdl/sap-dvl.kvazar-micro.zp.ua_8010/sap/bc/srt/wsdl/bndg_ECD5205023979079E1000000AC10150A/wsdl11/allinone/ws_policy/document.sap-client_200.wsdl" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356534216934" ignored="false" />
+    <file path="/ConverterHandler.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356638289444" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,16 +83,7 @@
       <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="40" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MANIFEST.MF" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+            <state line="18" column="34" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -103,38 +92,25 @@
       <file leaf-file-name="ThemeJarBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="50" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileEntity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/entity/FileEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="35" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+            <state line="25" column="46" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ThemerollerZipParser192.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/impl/ThemerollerZipParser192.java">
+      <file leaf-file-name="ConverterHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ConverterHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="56" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.7222222">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="23" column="47" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractThemerollerZipParser.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="AbstractThemerollerZipParser.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/AbstractThemerollerZipParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="50" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
+            <state line="21" column="51" selection-start="572" selection-end="572" vertical-scroll-proportion="0.30520648">
               <folding />
             </state>
           </provider>
@@ -170,21 +146,19 @@
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/entity/ImageEntity.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/entity/FileEntity.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/ThemerollerZipParser.java" />
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/AbstractThemerollerZipParser.java" />
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java" />
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/impl/ThemerollerZipParser192.java" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/parser/AbstractThemerollerZipParser.java" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ConverterHandler.java" />
       </list>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState />
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1688" />
-    <option name="height" value="1028" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -214,22 +188,12 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -338,12 +302,22 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
+      <pane id="ProjectPane">
+        <subPane>
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PrimefacesThemeConverter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PrimefacesThemeConverter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PrimefacesThemeConverter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -351,9 +325,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
@@ -367,11 +341,11 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.PrimefacesThemeConverter">
+  <component name="RunManager" selected="Application.PrimefacesThemeConverterJar">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -384,6 +358,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -412,19 +399,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -486,7 +460,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="PrimefacesThemeConverterDist" type="Application" factoryName="Application">
+    <configuration default="false" name="PrimefacesThemeConverterJar" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.maximchuk.ptc.Launcher" />
       <option name="VM_PARAMETERS" value="" />
@@ -509,7 +483,7 @@
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.PrimefacesThemeConverter" />
-      <item index="1" class="java.lang.String" itemvalue="Application.PrimefacesThemeConverterDist" />
+      <item index="1" class="java.lang.String" itemvalue="Application.PrimefacesThemeConverterJar" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -549,36 +523,36 @@
       <created>1356472286772</created>
       <updated>1356472286772</updated>
     </task>
-    <task id="LOCAL-00003" summary="Fixed jar building">
-      <created>1356534510278</created>
-      <updated>1356534510278</updated>
+    <task id="LOCAL-00003" summary="Alpha complete">
+      <created>1356522685687</created>
+      <updated>1356522685687</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1688" height="1028" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.50076103" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32875144" sideWeight="0.4939117" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.4939117" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965687" sideWeight="0.67124856" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17953432" sideWeight="0.67124856" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32875144" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23216996" sideWeight="0.62222224" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37777779" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -624,7 +598,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed jar building" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha complete" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -639,7 +613,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Add args check to main method" />
     <MESSAGE value="Added ThemeJarBuilder" />
-    <MESSAGE value="Fixed jar building" />
+    <MESSAGE value="Alpha complete" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -652,18 +626,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="54" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/impl/ThemerollerZipParser192.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="49" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -691,18 +661,14 @@
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="69" selection-start="480" selection-end="480" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/impl/ThemerollerZipParser192.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="47" selection-start="1562" selection-end="1562" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -720,56 +686,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/entity/FileEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/AbstractThemerollerZipParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="50" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/ThemerollerZipParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="288" selection-end="288" vertical-scroll-proportion="0.3655914">
+        <state line="25" column="46" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="40" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0">
+        <state line="18" column="34" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/entity/FileEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+        <state line="22" column="29" selection-start="454" selection-end="454" vertical-scroll-proportion="0.60714287">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/handle/ThemeJarBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/ThemerollerZipParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="50" selection-start="925" selection-end="925" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="15" column="20" selection-start="289" selection-end="289" vertical-scroll-proportion="0.25274727">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ConverterHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="47" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/impl/ThemerollerZipParser192.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="56" selection-start="2149" selection-end="2149" vertical-scroll-proportion="0.7222222">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="38" column="35" selection-start="1317" selection-end="1317" vertical-scroll-proportion="0.55654764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/parser/AbstractThemerollerZipParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="51" selection-start="572" selection-end="572" vertical-scroll-proportion="0.30520648">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -832,18 +794,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.6</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

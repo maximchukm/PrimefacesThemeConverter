@@ -32,6 +32,9 @@ public abstract class AbstractThemerollerZipParser implements ThemerollerZipPars
 
     @Override
     public FileEntity getCss() throws IOException {
+        if (cssEntry == null) {
+            throw new IllegalStateException("Execute parse first!");
+        }
         InputStream is = zipFile.getInputStream(cssEntry);
         byte[] data = new byte[is.available()];
         is.read(data);

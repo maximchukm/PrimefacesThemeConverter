@@ -12,6 +12,7 @@ import java.util.zip.ZipOutputStream;
  *         Date: 25.12.12
  */
 public class ThemeJarBuilder {
+    private static final String TEMP_DIR = "temp";
 
     private FileEntity css;
     private List<FileEntity> images;
@@ -24,7 +25,10 @@ public class ThemeJarBuilder {
     public void build(String outputDirName, String themeName) throws IOException {
         String cssDirName;
         String imagesDirName;
-        StringBuilder fileStructureNameBuilder = new StringBuilder("temp");
+        if (new File(TEMP_DIR).exists()) {
+            cleaningTemp();
+        }
+        StringBuilder fileStructureNameBuilder = new StringBuilder(TEMP_DIR);
         mkdir(fileStructureNameBuilder.toString());
         fileStructureNameBuilder.append("/META-INF/");
         mkdir(fileStructureNameBuilder.toString());
@@ -51,15 +55,13 @@ public class ThemeJarBuilder {
         StringBuilder jarNameBuilder = new StringBuilder(outputDirName);
         mkdir(jarNameBuilder.toString());
         jarNameBuilder.append("/").append(themeName).append(".jar");
-        ZipOutputStream out = new ZipOutputStream(new FileOutputStream(jarNameBuilder.toString()));
-        compressTheme("temp", null, out);
-        out.close();
-        System.out.print("cleaning temporary data... ");
-        if (new File("temp").delete()) {
-            System.out.println("ok");
-        } else {
-            System.out.println("error");
+        if (new File(jarNameBuilder.toString()).exists()) {
+            delete(new File(jarNameBuilder.toString()));
         }
+        ZipOutputStream out = new ZipOutputStream(new FileOutputStream(jarNameBuilder.toString()));
+        compressTheme(TEMP_DIR, null, out);
+        out.close();
+        cleaningTemp();
         System.out.println("complete!");
     }
 
@@ -92,6 +94,30 @@ public class ThemeJarBuilder {
                 in.close();
             }
         }
+    }
+
+    private void cleaningTemp() {
+        System.out.print("cleaning temporary data... ");
+        if (delete(new File("temp"))) {
+            System.out.println("ok");
+        } else {
+            System.out.println("error");
+        }
+    }
+
+    private boolean delete(File toDelete) {
+        boolean isDeleted = true;
+        if (toDelete.isDirectory()) {
+            for (File f: toDelete.listFiles()) {
+                isDeleted = delete(f);
+            }
+            if (isDeleted) {
+                isDeleted = toDelete.delete();
+            }
+        } else {
+            isDeleted = toDelete.delete();
+        }
+        return isDeleted;
     }
 
 }
