@@ -3,9 +3,8 @@ package com.maximchuk.ptc;
 
 import com.maximchuk.ptc.handle.ThemeJarBuilder;
 import com.maximchuk.ptc.parser.ThemerollerZipParser;
-import com.maximchuk.ptc.parser.impl.ThemerollerZipParser192;
 
-import java.io.File;
+import java.io.IOException;
 
 /**
  * @author Maxim L. Maximchuk
@@ -14,23 +13,13 @@ import java.io.File;
 public class Launcher {
 
     public static void main(String[] args) {
-        if (args.length == 1) {
-            try {
-                ThemerollerZipParser parser = new ThemerollerZipParser192(new File(args[0]));
-                if (parser.validate()) {
-                    if (parser.parse()) {
-                        System.out.println("Theme: " + parser.getDefaultThemeName());
-                        ThemeJarBuilder jarBuilder = new ThemeJarBuilder(parser.getCss(), parser.getImages());
-                        jarBuilder.build("outTheme", parser.getDefaultThemeName());
-                    } else {
-                        System.err.println("Invalid themeroller zip");
-                    }
-                } else {
-                    System.err.println("Unsupported themeroller version");
-                }
-            } catch (Exception ex) {
-                ex.printStackTrace();
+        if (args.length > 0) {
+            String themeName = null;
+            if (args.length > 1) {
+                themeName = args[1];
             }
+            ConverterHandler.process(args[0], themeName, "out_theme");
         }
     }
+
 }

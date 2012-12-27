@@ -19,5 +19,7 @@ public interface ThemerollerZipParser {
 
     public List<FileEntity> getImages() throws IOException;
 
-    public String getDefaultThemeName();
+    public String getThemeName();
+
+    public void setThemeName(String themeName);
 }

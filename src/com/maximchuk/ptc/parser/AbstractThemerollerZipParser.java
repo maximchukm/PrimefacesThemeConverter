@@ -16,6 +16,7 @@ import java.util.zip.ZipFile;
  */
 public abstract class AbstractThemerollerZipParser implements ThemerollerZipParser {
 
+    private String themeName;
     protected ZipFile zipFile;
     protected ZipEntry cssEntry = null;
     protected List<ZipEntry> imagesEntryList = new ArrayList<ZipEntry>();
@@ -54,4 +55,12 @@ public abstract class AbstractThemerollerZipParser implements ThemerollerZipPars
     protected abstract FileEntity prepareCss(byte[] data) throws IOException;
 
     protected abstract String getVersion();
+
+    public String getThemeName() {
+        return themeName;
+    }
+
+    public void setThemeName(String themeName) {
+        this.themeName = themeName;
+    }
 }
