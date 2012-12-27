@@ -8,15 +8,27 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * Main static handler
+ *
  * @author Maxim L. Maximchuk
  *         Date: 27.12.12
  */
 public class ConverterHandler {
 
+    /**
+     * Hided class constructor
+     */
     private ConverterHandler() {
         super();
     }
 
+    /**
+     * Main processing method
+     *
+     * @param sourceFilename source themeroller zip file name
+     * @param themeName your theme preferred name, if null then making from source default name
+     * @param outDir result output directory
+     */
     public static void process(String sourceFilename, String themeName, String outDir) {
         try {
             ThemerollerZipParser parser = new ThemerollerZipParser192(new File(sourceFilename));
@@ -35,6 +47,13 @@ public class ConverterHandler {
         }
     }
 
+    /**
+     * Building theme
+     *
+     * @param parser themeroller zip parser
+     * @param outDir result output directory
+     * @throws IOException
+     */
     private static void buildTheme(ThemerollerZipParser parser, String outDir) throws IOException {
         System.out.println("Theme: " + parser.getThemeName());
         ThemeJarBuilder jarBuilder = new ThemeJarBuilder(parser.getCss(), parser.getImages());

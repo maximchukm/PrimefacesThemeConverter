@@ -11,6 +11,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 /**
+ * Abstract class for themeroller zip parser
+ * contains generic methods
+ *
  * @author Maxim L. Maximchuk
  *         Date: 25.12.12
  */
@@ -21,6 +24,12 @@ public abstract class AbstractThemerollerZipParser implements ThemerollerZipPars
     protected ZipEntry cssEntry = null;
     protected List<ZipEntry> imagesEntryList = new ArrayList<ZipEntry>();
 
+    /**
+     * Abstract class constructor
+     *
+     * @param file zip filename to parse
+     * @throws IOException
+     */
     public AbstractThemerollerZipParser(File file) throws IOException {
         zipFile = new ZipFile(file);
     }

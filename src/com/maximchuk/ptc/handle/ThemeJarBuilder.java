@@ -8,6 +8,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
+ * Builds Primefaces theme jar file
+ *
  * @author Maxim L. Maximchuk
  *         Date: 25.12.12
  */
@@ -17,11 +19,24 @@ public class ThemeJarBuilder {
     private FileEntity css;
     private List<FileEntity> images;
 
+    /**
+     * Class constructor
+     *
+     * @param cssData css entity object
+     * @param imagesData images entity list
+     */
     public ThemeJarBuilder(FileEntity cssData, List<FileEntity> imagesData) {
         this.css = cssData;
         this.images = imagesData;
     }
 
+    /**
+     * Main method for build jar processing
+     *
+     * @param outputDirName
+     * @param themeName
+     * @throws IOException
+     */
     public void build(String outputDirName, String themeName) throws IOException {
         String cssDirName;
         String imagesDirName;
@@ -43,7 +58,7 @@ public class ThemeJarBuilder {
         mkdir(fileStructureNameBuilder.toString());
         imagesDirName = fileStructureNameBuilder.toString();
 
-        //create files
+        //creating files
         OutputStream os = new FileOutputStream(cssDirName + css.getFilename());
         os.write(css.getData());
         os.close();
@@ -53,7 +68,7 @@ public class ThemeJarBuilder {
             os.close();
         }
 
-        //Create jar
+        //creating jar
         StringBuilder jarNameBuilder = new StringBuilder(outputDirName);
         mkdir(jarNameBuilder.toString());
         jarNameBuilder.append("/").append(themeName).append(".jar");
@@ -69,11 +84,14 @@ public class ThemeJarBuilder {
         System.out.println("complete!");
     }
 
-    private void mkdir(String dirName) {
-        File f = new File(dirName);
-        f.mkdir();
-    }
-
+    /**
+     * Compressing file structure
+     *
+     * @param directory initiate directory
+     * @param entryName current zip entry name
+     * @param out zip output stream
+     * @throws IOException
+     */
     private void compressTheme(String directory, String entryName, ZipOutputStream out) throws IOException {
         File files = new File(directory);
         String[] contents = files.list();
@@ -100,6 +118,11 @@ public class ThemeJarBuilder {
         }
     }
 
+    /**
+     * Cleaning temporary files
+     *
+     * @return true if execute successful
+     */
     private boolean cleaningTemp() {
         boolean isOk;
         System.out.print("cleaning temporary data... ");
@@ -113,6 +136,22 @@ public class ThemeJarBuilder {
         return isOk;
     }
 
+    /**
+     * Making empty directory
+     *
+     * @param dirName directory name
+     */
+    private void mkdir(String dirName) {
+        File f = new File(dirName);
+        f.mkdir();
+    }
+
+    /**
+     * Deleting file or directory
+     *
+     * @param toDelete
+     * @return
+     */
     private boolean delete(File toDelete) {
         boolean isDeleted = true;
         if (toDelete.isDirectory()) {
