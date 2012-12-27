@@ -26,7 +26,9 @@ public class ThemeJarBuilder {
         String cssDirName;
         String imagesDirName;
         if (new File(TEMP_DIR).exists()) {
-            cleaningTemp();
+            if (!cleaningTemp()) {
+                return;
+            }
         }
         StringBuilder fileStructureNameBuilder = new StringBuilder(TEMP_DIR);
         mkdir(fileStructureNameBuilder.toString());
@@ -61,7 +63,9 @@ public class ThemeJarBuilder {
         ZipOutputStream out = new ZipOutputStream(new FileOutputStream(jarNameBuilder.toString()));
         compressTheme(TEMP_DIR, null, out);
         out.close();
-        cleaningTemp();
+        if (!cleaningTemp()) {
+            return;
+        }
         System.out.println("complete!");
     }
 
@@ -96,13 +100,17 @@ public class ThemeJarBuilder {
         }
     }
 
-    private void cleaningTemp() {
+    private boolean cleaningTemp() {
+        boolean isOk;
         System.out.print("cleaning temporary data... ");
         if (delete(new File("temp"))) {
             System.out.println("ok");
+            isOk = true;
         } else {
             System.out.println("error");
+            isOk = false;
         }
+        return isOk;
     }
 
     private boolean delete(File toDelete) {
@@ -110,6 +118,9 @@ public class ThemeJarBuilder {
         if (toDelete.isDirectory()) {
             for (File f: toDelete.listFiles()) {
                 isDeleted = delete(f);
+                if (!isDeleted) {
+                    break;
+                }
             }
             if (isDeleted) {
                 isDeleted = toDelete.delete();
