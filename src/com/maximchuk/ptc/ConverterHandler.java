@@ -8,10 +8,9 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Main static handler
+ * Main converter handler
  *
  * @author Maxim L. Maximchuk
- *         Date: 27.12.12
  */
 public class ConverterHandler {
 
@@ -24,6 +23,7 @@ public class ConverterHandler {
 
     /**
      * Main processing method
+     * generates primefaces theme jar from themeroller jar
      *
      * @param sourceFilename source themeroller zip file name
      * @param themeName your theme preferred name, if null then making from source default name

@@ -15,7 +15,6 @@ import java.util.zip.ZipFile;
  * contains generic methods
  *
  * @author Maxim L. Maximchuk
- *         Date: 25.12.12
  */
 public abstract class AbstractThemerollerZipParser implements ThemerollerZipParser {
 
@@ -64,8 +63,20 @@ public abstract class AbstractThemerollerZipParser implements ThemerollerZipPars
         return images;
     }
 
+    /**
+     * Preparing css before getting
+     *
+     * @param data css data in byte array
+     * @return css file entity
+     * @throws IOException
+     */
     protected abstract FileEntity prepareCss(byte[] data) throws IOException;
 
+    /**
+     * Getting parser implementation version
+     *
+     * @return
+     */
     protected abstract String getVersion();
 
     public String getThemeName() {

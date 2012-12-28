@@ -2,8 +2,9 @@ package com.maximchuk.ptc;
 
 
 /**
+ * Application launcher with main method
+ *
  * @author Maxim L. Maximchuk
- *         Date: 25.12.12
  */
 public class Launcher {
     private static final String OUTPUT_DIR = "out_theme";

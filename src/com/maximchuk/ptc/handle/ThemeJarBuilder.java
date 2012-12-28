@@ -11,7 +11,6 @@ import java.util.zip.ZipOutputStream;
  * Builds Primefaces theme jar file
  *
  * @author Maxim L. Maximchuk
- *         Date: 25.12.12
  */
 public class ThemeJarBuilder {
     private static final String TEMP_DIR = "temp";
@@ -33,8 +32,8 @@ public class ThemeJarBuilder {
     /**
      * Main method for build jar processing
      *
-     * @param outputDirName
-     * @param themeName
+     * @param outputDirName result output directory
+     * @param themeName theme name
      * @throws IOException
      */
     public void build(String outputDirName, String themeName) throws IOException {

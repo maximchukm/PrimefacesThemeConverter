@@ -9,7 +9,6 @@ import java.util.List;
  * Themeroller zip parser interface
  *
  * @author Maxim L. Maximchuk
- *         Date: 25.12.12
  */
 public interface ThemerollerZipParser {
 

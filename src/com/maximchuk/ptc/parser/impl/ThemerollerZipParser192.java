@@ -9,8 +9,9 @@ import java.util.Enumeration;
 import java.util.zip.ZipEntry;
 
 /**
+ * Themeroller zip parser implementation for version 1.9.2
+ *
  * @author Maxim L. Maximchuk
- *         Date: 25.12.12
  */
 public class ThemerollerZipParser192 extends AbstractThemerollerZipParser implements ThemerollerZipParser {
 
