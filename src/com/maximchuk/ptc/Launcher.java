@@ -16,8 +16,9 @@ public class Launcher {
     public static void main(String[] args) {
         if (args.length == 1) {
             if (args[0].equals("-w")) {
-
+                //execute GUI
             } else {
+                //execute console
                 try {
                     Properties props = new Properties();
                     props.load(new FileInputStream(args[0]));

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="PrimefacesThemeConverterDist">
+    <output-path>$PROJECT_DIR$/dist</output-path>
+    <root id="root">
+      <element id="artifact" artifact-name="PrimefacesThemeConverter:jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/res/default.properties" />
+      <element id="file-copy" path="$PROJECT_DIR$/res/run_default.bat" />
+    </root>
+  </artifact>
+</component>

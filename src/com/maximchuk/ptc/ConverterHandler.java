@@ -1,11 +1,16 @@
 package com.maximchuk.ptc;
 
+import com.maximchuk.ptc.entity.CssPropertyEntity;
+import com.maximchuk.ptc.entity.CssPropertyEnum;
+import com.maximchuk.ptc.handle.CssProcessor;
 import com.maximchuk.ptc.handle.ThemeJarBuilder;
 import com.maximchuk.ptc.parser.ThemerollerZipParser;
 import com.maximchuk.ptc.parser.impl.ThemerollerZipParser192;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -19,6 +24,9 @@ public class ConverterHandler {
     public static final String OUTPUT_DIR_KEY = "output.dir";
 
     private static final String DEFAULT_OUTPUT_DIR = "out_theme";
+
+    private static String themeName;
+    private static List<CssPropertyEntity> additionalCssProperties = new ArrayList<CssPropertyEntity>();
 
     /**
      * Hided class constructor
@@ -34,15 +42,27 @@ public class ConverterHandler {
      * @param themeProps theme properties
      */
     public static void process(Properties themeProps) {
+        // reading properties
         String filename = themeProps.getProperty(SRC_FILENAME_KEY);
-        String themeName = themeProps.getProperty(THEME_NAME_KEY);
         String outDir = themeProps.getProperty(OUTPUT_DIR_KEY);
+        themeName = themeProps.getProperty(THEME_NAME_KEY);
+
+        for (CssPropertyEnum cssProps: CssPropertyEnum.values()) {
+            if (themeProps.getProperty(cssProps.getPropertyKey()) != null) {
+                additionalCssProperties.add(new CssPropertyEntity(cssProps,
+                        themeProps.getProperty(cssProps.getPropertyKey())));
+            }
+        }
+
+        // converting theme
         if (filename != null) {
             try {
                 ThemerollerZipParser parser = new ThemerollerZipParser192(new File(filename));
                 if (parser.validate()) {
-                    parser.setThemeName(themeName);
                     if (parser.parse()) {
+                        if (themeName == null) {
+                            themeName = parser.getThemeName();
+                        }
                         buildTheme(parser, outDir != null? outDir: DEFAULT_OUTPUT_DIR);
                     } else {
                         System.err.println("Invalid themeroller zip");
@@ -66,9 +86,11 @@ public class ConverterHandler {
      * @throws IOException
      */
     private static void buildTheme(ThemerollerZipParser parser, String outDir) throws IOException {
-        System.out.println("Theme: " + parser.getThemeName());
-        ThemeJarBuilder jarBuilder = new ThemeJarBuilder(parser.getCss(), parser.getImages());
-        jarBuilder.build(outDir, parser.getThemeName());
+        System.out.println("Theme: " + themeName);
+        CssProcessor cssProcessor = new CssProcessor(themeName, parser.getCss(),
+                additionalCssProperties.toArray(new CssPropertyEntity[additionalCssProperties.size()]));
+        ThemeJarBuilder jarBuilder = new ThemeJarBuilder(cssProcessor.process(), parser.getImages());
+        jarBuilder.build(outDir, themeName);
     }
 
 }

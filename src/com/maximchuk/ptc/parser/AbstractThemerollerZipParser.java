@@ -18,7 +18,6 @@ import java.util.zip.ZipFile;
  */
 public abstract class AbstractThemerollerZipParser implements ThemerollerZipParser {
 
-    private String themeName;
     protected ZipFile zipFile;
     protected ZipEntry cssEntry = null;
     protected List<ZipEntry> imagesEntryList = new ArrayList<ZipEntry>();
@@ -40,13 +39,11 @@ public abstract class AbstractThemerollerZipParser implements ThemerollerZipPars
 
     @Override
     public FileEntity getCss() throws IOException {
-        if (cssEntry == null) {
-            throw new IllegalStateException("Execute parse first!");
-        }
+        checkCssEntry();
         InputStream is = zipFile.getInputStream(cssEntry);
         byte[] data = new byte[is.available()];
         is.read(data);
-        return prepareCss(data);
+        return new FileEntity("theme.css", data);
     }
 
     @Override
@@ -64,26 +61,16 @@ public abstract class AbstractThemerollerZipParser implements ThemerollerZipPars
     }
 
     /**
-     * Preparing css before getting
-     *
-     * @param data css data in byte array
-     * @return css file entity
-     * @throws IOException
-     */
-    protected abstract FileEntity prepareCss(byte[] data) throws IOException;
-
-    /**
      * Getting parser implementation version
      *
      * @return
      */
     protected abstract String getVersion();
 
-    public String getThemeName() {
-        return themeName;
+    protected void checkCssEntry() {
+        if (cssEntry == null) {
+            throw new IllegalStateException("Execute parse first!");
+        }
     }
 
-    public void setThemeName(String themeName) {
-        this.themeName = themeName;
-    }
 }

@@ -75,12 +75,13 @@ public class ThemeJarBuilder {
             delete(new File(jarNameBuilder.toString()));
         }
         ZipOutputStream out = new ZipOutputStream(new FileOutputStream(jarNameBuilder.toString()));
+        System.out.println("Creating theme jar...");
         compressTheme(TEMP_DIR, null, out);
         out.close();
         if (!cleaningTemp()) {
             return;
         }
-        System.out.println("complete!");
+        System.out.println("Complete! Check '" + new File(outputDirName).getAbsolutePath() +"' folder");
     }
 
     /**
@@ -124,7 +125,7 @@ public class ThemeJarBuilder {
      */
     private boolean cleaningTemp() {
         boolean isOk;
-        System.out.print("cleaning temporary data... ");
+        System.out.print("Cleaning temporary data... ");
         if (delete(new File("temp"))) {
             System.out.println("ok");
             isOk = true;

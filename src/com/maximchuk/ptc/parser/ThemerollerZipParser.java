@@ -13,9 +13,9 @@ import java.util.List;
 public interface ThemerollerZipParser {
 
     /**
-     * Validating themeroller zip structure
+     * Validating themeroller version
      *
-     * @return true if zip structure valid
+     * @return true if version supported
      */
     public boolean validate();
 
@@ -51,10 +51,4 @@ public interface ThemerollerZipParser {
      */
     public String getThemeName();
 
-    /**
-     * Setting theme name
-     *
-     * @param themeName
-     */
-    public void setThemeName(String themeName);
 }
