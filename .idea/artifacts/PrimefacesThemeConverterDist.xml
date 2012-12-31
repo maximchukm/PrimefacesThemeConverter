@@ -12,6 +12,7 @@
       <element id="directory" name="config">
         <element id="file-copy" path="$PROJECT_DIR$/res/default.properties" />
       </element>
+      <element id="file-copy" path="$PROJECT_DIR$/res/run_gui.bat" />
     </root>
   </artifact>
 </component>
