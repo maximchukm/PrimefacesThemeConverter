@@ -10,7 +10,7 @@
         <element id="file-copy" path="$PROJECT_DIR$/res/jquery-ui-1.9.2.custom.zip" />
       </element>
       <element id="directory" name="config">
-        <element id="file-copy" path="$PROJECT_DIR$/res/default.properties" />
+        <element id="file-copy" path="$PROJECT_DIR$/res/default.prof" />
       </element>
       <element id="file-copy" path="$PROJECT_DIR$/res/run_gui.bat" />
     </root>
