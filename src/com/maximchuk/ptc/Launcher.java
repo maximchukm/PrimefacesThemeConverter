@@ -20,9 +20,9 @@ public class Launcher {
                 if (args[0].equals("-w")) {
                     // execute GUI mode
                     ConverterForm.show();
-                    PipedOutputStream pOut = new PipedOutputStream();
 
                     // redirecting system output to piped stream for reading
+                    PipedOutputStream pOut = new PipedOutputStream();
                     System.setOut(new PrintStream(pOut));
                     System.setErr(new PrintStream(pOut));
                     PipedInputStream pIn = new PipedInputStream(pOut);
@@ -47,7 +47,7 @@ public class Launcher {
                 }
             }
         } catch (Exception e) {
-            System.err.println("Incorrect properties format");
+           e.printStackTrace();
         }
     }
 

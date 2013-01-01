@@ -26,7 +26,7 @@ public class ConverterHandler {
     private static final String DEFAULT_OUTPUT_DIR = "theme_out";
 
     private static String themeName;
-    private static List<CssPropertyEntity> additionalCssProperties = new ArrayList<CssPropertyEntity>();
+    private static List<CssPropertyEntity> additionalCssProperties;
 
     /**
      * Hided class constructor
@@ -47,6 +47,7 @@ public class ConverterHandler {
         String outDir = themeProps.getProperty(OUTPUT_DIR_KEY);
         themeName = themeProps.getProperty(THEME_NAME_KEY);
 
+        additionalCssProperties = new ArrayList<CssPropertyEntity>();
         for (CssPropertyEnum cssProps: CssPropertyEnum.values()) {
             if (themeProps.getProperty(cssProps.getPropertyKey()) != null) {
                 additionalCssProperties.add(new CssPropertyEntity(cssProps,

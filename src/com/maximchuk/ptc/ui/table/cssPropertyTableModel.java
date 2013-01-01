@@ -62,11 +62,22 @@ public class CssPropertyTableModel implements TableModel {
         }
     }
 
-    public void addCssProperty(CssPropertyEntity cssProperty) {
+    public void addRow(CssPropertyEntity cssProperty) {
         if (!isExistCssProperty(cssProperty.getType())) {
             addedCssPropertyTypeSet.add(cssProperty.getType());
             dataList.add(cssProperty);
         }
+    }
+
+    public void removeRowByInd(int ind) {
+        CssPropertyEntity data = dataList.get(ind);
+        addedCssPropertyTypeSet.remove(data.getType());
+        dataList.remove(data);
+    }
+
+    public void clear() {
+        dataList = new ArrayList<CssPropertyEntity>();
+        addedCssPropertyTypeSet = new HashSet<CssPropertyEnum>();
     }
 
     public List<CssPropertyEntity> getDataList() {

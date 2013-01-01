@@ -20,6 +20,8 @@ public class AddCssPropertyDialog extends JDialog {
     private JComboBox cssPropertyComobBox;
 
     public AddCssPropertyDialog(final CssPropertyTableModel tableModel) {
+        setSize(400, 200);
+        setTitle("Add new css property");
 
         for (CssPropertyEnum type: CssPropertyEnum.values()) {
             if (!tableModel.isExistCssProperty(type)) {
@@ -41,9 +43,9 @@ public class AddCssPropertyDialog extends JDialog {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                tableModel.addCssProperty(
-                        new CssPropertyEntity((CssPropertyEnum)cssPropertyComobBox.getSelectedItem(),
-                        cssClassValueInput.getText()));
+                tableModel.addRow(
+                        new CssPropertyEntity((CssPropertyEnum) cssPropertyComobBox.getSelectedItem(),
+                                cssClassValueInput.getText()));
                 dispose();
             }
         });
