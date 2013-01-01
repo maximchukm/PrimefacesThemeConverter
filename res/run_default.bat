@@ -1,2 +1,2 @@
-java -jar bin/ptc.jar config/default.properties
+java -jar bin/ptc.jar config/default.prof
 pause
