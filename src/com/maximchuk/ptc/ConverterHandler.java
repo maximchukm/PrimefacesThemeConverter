@@ -8,6 +8,7 @@ import com.maximchuk.ptc.parser.ThemerollerZipParser;
 import com.maximchuk.ptc.parser.impl.ThemerollerZipParser192;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,7 +57,7 @@ public class ConverterHandler {
         }
 
         // converting theme
-        if (filename != null) {
+        if (filename != null && !filename.isEmpty()) {
             try {
                 ThemerollerZipParser parser = new ThemerollerZipParser192(new File(filename));
                 if (parser.validate()) {
@@ -68,6 +69,8 @@ public class ConverterHandler {
                 } else {
                     System.err.println("Unsupported themeroller version");
                 }
+            } catch (FileNotFoundException ex) {
+                System.err.println("Source file '" + filename + "' not found");
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
