@@ -11,7 +11,8 @@ public abstract class AbstractFileFilter extends FileFilter {
     @Override
     public boolean accept(File f) {
         String[] filenameParts = f.getName().replace(".", "&").split("&");
-        return f.isDirectory() || filenameParts.length > 0 && filenameParts[filenameParts.length - 1].equals(getDescription());
+        return f.isDirectory() || filenameParts.length > 0 && filenameParts[filenameParts.length - 1]
+                .equals(getDescription());
     }
 
 }

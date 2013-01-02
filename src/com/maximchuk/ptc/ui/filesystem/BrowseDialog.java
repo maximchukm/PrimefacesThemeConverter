@@ -1,6 +1,4 @@
-package com.maximchuk.ptc.ui;
-
-import com.maximchuk.ptc.ui.filesystem.FileTypeEnum;
+package com.maximchuk.ptc.ui.filesystem;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

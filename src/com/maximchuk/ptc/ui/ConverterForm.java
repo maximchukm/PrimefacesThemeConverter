@@ -6,6 +6,7 @@ import com.maximchuk.ptc.entity.CssPropertyEnum;
 import com.maximchuk.ptc.helper.UIHelper;
 import com.maximchuk.ptc.parser.ThemerollerZipParser;
 import com.maximchuk.ptc.parser.impl.ThemerollerZipParser192;
+import com.maximchuk.ptc.ui.filesystem.BrowseDialog;
 import com.maximchuk.ptc.ui.filesystem.FileTypeEnum;
 import com.maximchuk.ptc.ui.table.CssPropertyTableModel;
 
@@ -40,16 +41,15 @@ public class ConverterForm {
     private JLabel themenameLabel;
     private JTable cssPropertyTable;
     private JButton createButton;
-    private JButton addCssPropertyButton;
+    private JButton addCssPropButton;
     private JScrollPane scrollPane;
-    private JButton removeCssPropertyButton;
+    private JButton removeCssPropButton;
 
     public ConverterForm() {
         tableModel = new CssPropertyTableModel();
         cssPropertyTable.setModel(tableModel);
 
         consoleOutput = new ConsoleOutput();
-        consoleOutput.setTitle("Console output");
 
         // Action listeners
         browseButton.addActionListener(new ActionListener() {
@@ -63,8 +63,6 @@ public class ConverterForm {
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-
                 consoleOutput.clear();
                 UIHelper.centerWindow(consoleOutput);
                 consoleOutput.setVisible(true);
@@ -73,7 +71,7 @@ public class ConverterForm {
             }
         });
 
-        addCssPropertyButton.addActionListener(new ActionListener() {
+        addCssPropButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddCssPropertyDialog addCssPropertyDialog = new AddCssPropertyDialog(tableModel);
@@ -84,7 +82,7 @@ public class ConverterForm {
             }
         });
 
-        removeCssPropertyButton.addActionListener(new ActionListener() {
+        removeCssPropButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int selInd = cssPropertyTable.getSelectedRow();
@@ -112,7 +110,7 @@ public class ConverterForm {
         frame.setContentPane(converterForm.mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 300);
-        frame.addWindowListener(windowShowListener);
+        frame.addWindowListener(windowListener);
         frame.setVisible(true);
     }
 
@@ -140,6 +138,7 @@ public class ConverterForm {
 
         menuBar.add(fileMenu);
 
+        // Menu actions
         newProfMenuItem.setAction(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -155,12 +154,13 @@ public class ConverterForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BrowseDialog browseDialog = new BrowseDialog(FileTypeEnum.PROFILE, creator.profileFileChoosedListener);
-                browseDialog.showOpenDialog(creator.mainPanel);
-                try {
-                    creator.loadProfile();
-                    creator.refreshTitle();
-                } catch (IOException ex) {
-                    System.err.println(ex.getMessage());
+                if (browseDialog.showOpenDialog(creator.mainPanel) == BrowseDialog.APPROVE_OPTION) {
+                    try {
+                        creator.loadProfile();
+                        creator.refreshTitle();
+                    } catch (IOException ex) {
+                        System.err.println(ex.getMessage());
+                    }
                 }
             }
         });
@@ -190,8 +190,7 @@ public class ConverterForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BrowseDialog browseDialog = new BrowseDialog(FileTypeEnum.PROFILE, creator.profileFileChoosedListener);
-                int browseDialogRes = browseDialog.showSaveDialog(creator.mainPanel);
-                if (browseDialogRes == BrowseDialog.APPROVE_OPTION) {
+                if (browseDialog.showSaveDialog(creator.mainPanel) == BrowseDialog.APPROVE_OPTION) {
                     try {
                         creator.saveProfile();
                         creator.refreshTitle();
@@ -231,7 +230,7 @@ public class ConverterForm {
         }
     };
 
-    private static WindowListener windowShowListener = new WindowListener() {
+    private static WindowListener windowListener = new WindowListener() {
         @Override
         public void windowOpened(WindowEvent e) {
             UIHelper.centerWindow(e.getWindow());
@@ -263,11 +262,11 @@ public class ConverterForm {
     };
 
     private void checkAddButton() {
-        addCssPropertyButton.setEnabled(tableModel.canAddedNewCssProperty());
+        addCssPropButton.setEnabled(tableModel.canAddedNewCssProperty());
     }
 
     private void checkRemoveButton() {
-        removeCssPropertyButton.setEnabled(cssPropertyTable.getSelectedRow() > -1 && tableModel.getRowCount() > 0);
+        removeCssPropButton.setEnabled(cssPropertyTable.getSelectedRow() > -1 && tableModel.getRowCount() > 0);
     }
 
     private void loadProfile() throws IOException {
@@ -301,8 +300,12 @@ public class ConverterForm {
 
     private Properties bindProfile() {
         Properties profile = new Properties();
-        profile.setProperty(ConverterHandler.SRC_FILENAME_KEY, srcInput.getText());
-        profile.setProperty(ConverterHandler.THEME_NAME_KEY, themenameInput.getText());
+        if (!srcInput.getText().isEmpty()) {
+            profile.setProperty(ConverterHandler.SRC_FILENAME_KEY, srcInput.getText());
+        }
+        if (!themenameInput.getText().isEmpty()) {
+            profile.setProperty(ConverterHandler.THEME_NAME_KEY, themenameInput.getText());
+        }
 
         for (CssPropertyEntity cssProperty: tableModel.getDataList()) {
             profile.setProperty(cssProperty.getType().getPropertyKey(), cssProperty.getValue());

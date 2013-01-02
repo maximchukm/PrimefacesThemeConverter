@@ -73,7 +73,7 @@
           </component>
         </children>
       </scrollpane>
-      <component id="5a411" class="javax.swing.JButton" binding="addCssPropertyButton">
+      <component id="5a411" class="javax.swing.JButton" binding="addCssPropButton">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -81,7 +81,7 @@
           <text value="Add"/>
         </properties>
       </component>
-      <component id="6b088" class="javax.swing.JButton" binding="removeCssPropertyButton">
+      <component id="6b088" class="javax.swing.JButton" binding="removeCssPropButton">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>

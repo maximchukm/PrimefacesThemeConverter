@@ -12,6 +12,7 @@ public class ConsoleOutput extends JDialog {
 
     public ConsoleOutput() {
         setContentPane(contentPane);
+        setTitle("Console output");
         setSize(800, 600);
 
         hideButton.addActionListener(new ActionListener() {

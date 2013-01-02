@@ -18,7 +18,7 @@ public class CssPropertyTableModel implements TableModel {
     private String[] columnNames = {"Component name", "Css class value"};
 
     private List<CssPropertyEntity> dataList = new ArrayList<CssPropertyEntity>();
-    private Set<CssPropertyEnum> addedCssPropertyTypeSet = new HashSet<CssPropertyEnum>();
+    private Set<CssPropertyEnum> existsCssPropTypeSet = new HashSet<CssPropertyEnum>();
 
     @Override
     public int getRowCount() {
@@ -64,20 +64,20 @@ public class CssPropertyTableModel implements TableModel {
 
     public void addRow(CssPropertyEntity cssProperty) {
         if (!isExistCssProperty(cssProperty.getType())) {
-            addedCssPropertyTypeSet.add(cssProperty.getType());
+            existsCssPropTypeSet.add(cssProperty.getType());
             dataList.add(cssProperty);
         }
     }
 
     public void removeRowByInd(int ind) {
         CssPropertyEntity data = dataList.get(ind);
-        addedCssPropertyTypeSet.remove(data.getType());
+        existsCssPropTypeSet.remove(data.getType());
         dataList.remove(data);
     }
 
     public void clear() {
         dataList = new ArrayList<CssPropertyEntity>();
-        addedCssPropertyTypeSet = new HashSet<CssPropertyEnum>();
+        existsCssPropTypeSet = new HashSet<CssPropertyEnum>();
     }
 
     public List<CssPropertyEntity> getDataList() {
@@ -85,7 +85,7 @@ public class CssPropertyTableModel implements TableModel {
     }
 
     public boolean isExistCssProperty(CssPropertyEnum cssPropertyType) {
-        return addedCssPropertyTypeSet.contains(cssPropertyType);
+        return existsCssPropTypeSet.contains(cssPropertyType);
     }
 
     public boolean canAddedNewCssProperty() {
