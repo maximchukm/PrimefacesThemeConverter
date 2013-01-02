@@ -18,6 +18,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -25,12 +26,11 @@ import java.util.Properties;
  * @author Maxim L. Maximchuk
  */
 public class ConverterForm {
-    private String profileFileName;
-
     private static JFrame frame;
     private static ConsoleOutput consoleOutput;
 
     private CssPropertyTableModel tableModel;
+    private String profileFileName;
 
     private JPanel mainPanel;
     private JTextField srcInput;
@@ -44,8 +44,6 @@ public class ConverterForm {
     private JScrollPane scrollPane;
     private JButton removeCssPropertyButton;
 
-    private Properties config;
-
     public ConverterForm() {
         tableModel = new CssPropertyTableModel();
         cssPropertyTable.setModel(tableModel);
@@ -58,26 +56,20 @@ public class ConverterForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BrowseDialog browseDialog = new BrowseDialog(FileTypeEnum.THEME_SRC, srcThemeFileChoosedListener);
-                UIHelper.centerWindow(browseDialog);
-                browseDialog.setVisible(true);
+                browseDialog.showOpenDialog(mainPanel);
             }
         });
 
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                config = new Properties();
-                config.setProperty(ConverterHandler.SRC_FILENAME_KEY, srcInput.getText());
-                config.setProperty(ConverterHandler.THEME_NAME_KEY, themenameInput.getText());
-                for (CssPropertyEntity cssProperty: tableModel.getDataList()) {
-                    config.setProperty(cssProperty.getType().getPropertyKey(), cssProperty.getValue());
-                }
+
 
                 consoleOutput.clear();
                 UIHelper.centerWindow(consoleOutput);
                 consoleOutput.setVisible(true);
 
-                ConverterHandler.process(config);
+                ConverterHandler.process(bindProfile());
             }
         });
 
@@ -85,7 +77,6 @@ public class ConverterForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 AddCssPropertyDialog addCssPropertyDialog = new AddCssPropertyDialog(tableModel);
-//                addCssPropertyDialog.setSize(400, 200);
                 UIHelper.centerWindow(addCssPropertyDialog);
                 addCssPropertyDialog.setVisible(true);
                 cssPropertyTable.revalidate();
@@ -116,7 +107,7 @@ public class ConverterForm {
         UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
         ConverterForm converterForm = new ConverterForm();
 
-        frame = new JFrame("Primefaces theme converter");
+        frame = new JFrame(UIHelper.getAppTitle());
         frame.setJMenuBar(initMenu(converterForm));
         frame.setContentPane(converterForm.mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -136,41 +127,81 @@ public class ConverterForm {
     private static JMenuBar initMenu(final ConverterForm creator) {
         JMenuBar menuBar = new JMenuBar();
 
-        JMenu menu = new JMenu("File");
+        JMenu fileMenu = new JMenu("File");
         JMenuItem newProfMenuItem = new JMenuItem();
-        JMenuItem openProfMenuItem = new JMenuItem("Open profile");
-        JMenuItem saveMenuItem = new JMenuItem("Save profile");
+        JMenuItem openProfMenuItem = new JMenuItem();
+        JMenuItem saveMenuItem = new JMenuItem();
+        JMenuItem saveAsMenuItem = new JMenuItem();
 
-        menu.add(newProfMenuItem);
-        menu.add(openProfMenuItem);
-        menu.add(saveMenuItem);
+        fileMenu.add(newProfMenuItem);
+        fileMenu.add(openProfMenuItem);
+        fileMenu.add(saveMenuItem);
+        fileMenu.add(saveAsMenuItem);
 
-        menuBar.add(menu);
+        menuBar.add(fileMenu);
 
         newProfMenuItem.setAction(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 creator.acceptProfile(new Properties());
+                creator.profileFileName = null;
+                creator.refreshTitle();
             }
 
         });
-        newProfMenuItem.setText("New profile");
+        newProfMenuItem.setText("New");
 
         openProfMenuItem.setAction(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BrowseDialog browseDialog = new BrowseDialog(FileTypeEnum.PROFILE, creator.profileFileChoosedListener);
-                browseDialog.pack();
-                UIHelper.centerWindow(browseDialog);
-                browseDialog.setVisible(true);
+                browseDialog.showOpenDialog(creator.mainPanel);
                 try {
                     creator.loadProfile();
+                    creator.refreshTitle();
                 } catch (IOException ex) {
                     System.err.println(ex.getMessage());
                 }
             }
         });
-        openProfMenuItem.setText("Open profile");
+        openProfMenuItem.setText("Open");
+
+        saveMenuItem.setAction(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int browseDialogRes = 0;
+                if (creator.profileFileName == null) {
+                    BrowseDialog browseDialog = new BrowseDialog(FileTypeEnum.PROFILE, creator.profileFileChoosedListener);
+                    browseDialogRes = browseDialog.showSaveDialog(creator.mainPanel);
+                }
+                if (browseDialogRes == BrowseDialog.APPROVE_OPTION) {
+                    try {
+                        creator.saveProfile();
+                        creator.refreshTitle();
+                    } catch (IOException ex) {
+                        System.err.println(ex.getMessage());
+                    }
+                }
+            }
+        });
+        saveMenuItem.setText("Save");
+
+        saveAsMenuItem.setAction(new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                BrowseDialog browseDialog = new BrowseDialog(FileTypeEnum.PROFILE, creator.profileFileChoosedListener);
+                int browseDialogRes = browseDialog.showSaveDialog(creator.mainPanel);
+                if (browseDialogRes == BrowseDialog.APPROVE_OPTION) {
+                    try {
+                        creator.saveProfile();
+                        creator.refreshTitle();
+                    } catch (IOException ex) {
+                        System.err.println(ex.getMessage());
+                    }
+                }
+            }
+        });
+        saveAsMenuItem.setText("Save as");
         return menuBar;
     }
 
@@ -247,6 +278,11 @@ public class ConverterForm {
         }
     }
 
+    private void saveProfile() throws IOException {
+        Properties profile = bindProfile();
+        profile.store(new FileOutputStream(profileFileName), "Created from Primefaces theme converter");
+    }
+
     private void acceptProfile(Properties profile) {
         srcInput.setText((String)profile.get(ConverterHandler.SRC_FILENAME_KEY));
         themenameInput.setText((String) profile.get(ConverterHandler.THEME_NAME_KEY));
@@ -261,6 +297,29 @@ public class ConverterForm {
         checkAddButton();
         checkRemoveButton();
         cssPropertyTable.revalidate();
+    }
+
+    private Properties bindProfile() {
+        Properties profile = new Properties();
+        profile.setProperty(ConverterHandler.SRC_FILENAME_KEY, srcInput.getText());
+        profile.setProperty(ConverterHandler.THEME_NAME_KEY, themenameInput.getText());
+
+        for (CssPropertyEntity cssProperty: tableModel.getDataList()) {
+            profile.setProperty(cssProperty.getType().getPropertyKey(), cssProperty.getValue());
+        }
+        return profile;
+    }
+
+    private void refreshTitle() {
+        StringBuilder titleBuilder = new StringBuilder(UIHelper.getAppTitle());
+        if (profileFileName != null) {
+            titleBuilder.append(" - ").append(getProfilename());
+        }
+        frame.setTitle(titleBuilder.toString());
+    }
+
+    private String getProfilename() {
+        return new File(profileFileName).getName().replace(".prof", "");
     }
 
 }

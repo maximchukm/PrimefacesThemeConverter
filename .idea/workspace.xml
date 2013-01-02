@@ -9,8 +9,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/run_default.bat" afterPath="$PROJECT_DIR$/res/run_default.bat" />
+    <list default="true" id="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" name="Default" comment="Run default script for dist artifact modified">
+      <change type="DELETED" beforePath="D:\Dev\PrimefacesThemeConverter\src\com\maximchuk\ptc\ui\BrowseDialog.form" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.form" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.form" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/maximchuk/ptc/helper/UIHelper.java" afterPath="$PROJECT_DIR$/src/com/maximchuk/ptc/helper/UIHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PrimefacesThemeConverter.iws" />
@@ -21,10 +27,10 @@
     <file path="/Interface.txt.ft" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356464892933" ignored="false" />
     <file path="/Launcher.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357053145721" ignored="false" />
     <file path="/ThemerollerZipParser.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356771987530" ignored="false" />
-    <file path="/fragment.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357048280500" ignored="false" />
+    <file path="/fragment.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357119018235" ignored="false" />
     <file path="/ThemerollerZipParser192.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356774276355" ignored="false" />
     <file path="/AbstractThemerollerZipParser.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356774269777" ignored="false" />
-    <file path="/Dummy.txt" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357056837724" ignored="false" />
+    <file path="/Dummy.txt" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357123606158" ignored="false" />
     <file path="/ThemeJarBuilder.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356777447597" ignored="false" />
     <file path="/ImageEntity.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356517829034" ignored="false" />
     <file path="/ConverterHandler.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356778337902" ignored="false" />
@@ -41,10 +47,10 @@
     <file path="$PROJECT_DIR$/../eFarmer/trunk/DataModel/src/main/java/com/km/orgfrm/datamodel/entity/users/KmPrimeSkin.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356771712730" ignored="false" />
     <file path="/CssProcessor.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356777197954" ignored="false" />
     <file path="/MainForm.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356956462384" ignored="false" />
-    <file path="/BrowseDialog.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357056582973" ignored="false" />
-    <file path="/UIHelper.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356952792996" ignored="false" />
+    <file path="/BrowseDialog.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357122338103" ignored="false" />
+    <file path="/UIHelper.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357118236468" ignored="false" />
     <file path="/ConsoleOutput.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356957229642" ignored="false" />
-    <file path="/ConverterForm.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357054316310" ignored="false" />
+    <file path="/ConverterForm.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357122936246" ignored="false" />
     <file path="/tableModel.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1356974378295" ignored="false" />
     <file path="/AddCssPropertyDialog.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357044309373" ignored="false" />
     <file path="/CssPropertyTableModel.java" changelist="a52745f5-cf0e-44a1-bdbd-5dc0a331f094" time="1357052511203" ignored="false" />
@@ -71,7 +77,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -106,7 +112,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -116,26 +122,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConverterForm.form" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ConverterForm.form" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.form">
           <provider selected="true" editor-type-id="ui-designer">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConverterForm.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java">
+      <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="25" selection-start="5731" selection-end="5731" vertical-scroll-proportion="0.0">
+            <state line="37" column="53" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.0">
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConverterForm.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="136" column="84" selection-start="4722" selection-end="4722" vertical-scroll-proportion="0.6618005">
+              <folding>
+                <element signature="e#5752#6540#0" expanded="true" />
+                <element signature="e#6529#6530#0" expanded="true" />
+                <element signature="e#6615#7285#0" expanded="true" />
+                <element signature="e#7274#7275#0" expanded="true" />
+                <element signature="class#8367:9010" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/helper/UIHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="30" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsoleOutput.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsoleOutput.form" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="BrowseDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="62" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+            <state line="18" column="69" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileTypeEnum.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/filesystem/FileTypeEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="38" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,22 +221,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/table/cssPropertyTableModel.java" />
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/AddCssPropertyDialog.form" />
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ConverterHandler.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/AddCssPropertyDialog.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/filesystem/AbstractFileFilter.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/filesystem/ZipFileFilter.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/filesystem/ProfileFileFilter.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/filesystem/FileTypeEnum.java" />
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.form" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/menu/NewProfileAction.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/menu/AbstractAction.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/table/CssPropertyTableModel.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/menu/AbstractMenuAction.java" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java" />
-        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.form" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/helper/UIHelper.java" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.form" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.form" />
         <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java" />
       </list>
     </option>
   </component>
@@ -207,7 +262,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -218,106 +273,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.maximchuk.ptc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.maximchuk.ptc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PrimefacesThemeConverter" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com.maximchuk.ptc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BrowseDialog" />
-              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
@@ -580,17 +536,21 @@
       <created>1357056840211</created>
       <updated>1357056840211</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Run default script for dist artifact modified">
+      <created>1357057142284</created>
+      <updated>1357057142284</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32852808" sideWeight="0.75042737" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852808" sideWeight="0.75042737" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2185129" sideWeight="0.75042737" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2185129" sideWeight="0.75042737" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -652,7 +612,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dist artifact modified" />
+    <option name="LAST_COMMIT_MESSAGE" value="Run default script for dist artifact modified" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -678,6 +638,7 @@
     <MESSAGE value="Added additional css property table gui" />
     <MESSAGE value="Added profile loading&#10;UI code refactoring" />
     <MESSAGE value="Dist artifact modified" />
+    <MESSAGE value="Run default script for dist artifact modified" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -687,44 +648,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="25" selection-start="5731" selection-end="5731" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="64" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="36" selection-start="653" selection-end="653" vertical-scroll-proportion="0.703163">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ConverterHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="32" selection-start="1505" selection-end="1505" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/AddCssPropertyDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="47" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -744,41 +670,9 @@
         <state line="14" column="5" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/filesystem/FileTypeEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="73" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/table/CssPropertyTableModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="50" selection-start="2114" selection-end="2114" vertical-scroll-proportion="0.49635038" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="31" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.8759124">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="25" selection-start="5731" selection-end="5731" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="62" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/AddCssPropertyDialog.form">
@@ -786,9 +680,78 @@
         <state />
       </provider>
     </entry>
+    <entry file="jar://D:/soft/java/src.zip!/javax/swing/JFileChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="13" selection-start="2175" selection-end="2175" vertical-scroll-proportion="-1.1557177">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/AddCssPropertyDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="11" selection-start="651" selection-end="651" vertical-scroll-proportion="0.620438">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="127" selection-end="127" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.form">
       <provider selected="true" editor-type-id="ui-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="53" selection-start="1279" selection-end="1279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/filesystem/FileTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="38" selection-start="491" selection-end="491" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConsoleOutput.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/BrowseDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="69" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/helper/UIHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="30" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/maximchuk/ptc/ui/ConverterForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="84" selection-start="4722" selection-end="4722" vertical-scroll-proportion="0.6618005">
+          <folding>
+            <element signature="e#5752#6540#0" expanded="true" />
+            <element signature="e#6529#6530#0" expanded="true" />
+            <element signature="e#6615#7285#0" expanded="true" />
+            <element signature="e#7274#7275#0" expanded="true" />
+            <element signature="class#8367:9010" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>

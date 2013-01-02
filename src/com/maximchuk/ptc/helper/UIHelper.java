@@ -20,4 +20,8 @@ public class UIHelper {
                 - window.getHeight() / 2;
         window.setLocation(x, y);
     }
+
+    public static String getAppTitle() {
+        return "Primefaces theme converter";
+    }
 }

@@ -27,7 +27,7 @@
       <component id="26399" class="javax.swing.JLabel" binding="srcLabel">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="86" height="16"/>
+            <preferred-size width="79" height="16"/>
           </grid>
         </constraints>
         <properties>
@@ -37,7 +37,7 @@
       <component id="1be38" class="javax.swing.JLabel" binding="themenameLabel">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
-            <preferred-size width="86" height="16"/>
+            <preferred-size width="79" height="16"/>
           </grid>
         </constraints>
         <properties>

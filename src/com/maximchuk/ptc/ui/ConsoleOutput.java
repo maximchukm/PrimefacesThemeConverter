@@ -8,6 +8,7 @@ public class ConsoleOutput extends JDialog {
     private JPanel contentPane;
     private JTextArea consoleOutArea;
     private JButton hideButton;
+    private JScrollPane scrollPane;
 
     public ConsoleOutput() {
         setContentPane(contentPane);

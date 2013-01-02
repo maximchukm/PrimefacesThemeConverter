@@ -5,31 +5,23 @@ import com.maximchuk.ptc.ui.filesystem.FileTypeEnum;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
-public class BrowseDialog extends JDialog {
+public class BrowseDialog extends JFileChooser {
 
-    private JPanel contentPane;
-    private JFileChooser fileChooser;
-    private ActionListener fileChoosedListener;
+    public BrowseDialog(final FileTypeEnum fileType, final ActionListener fileChoosedListener) {
+        setCurrentDirectory(fileType.getRootDir());
+        removeChoosableFileFilter(getChoosableFileFilters()[0]);
+        addChoosableFileFilter(fileType.getFileFilter());
 
-    public BrowseDialog(FileTypeEnum fileType, final ActionListener fileChoosedListener) {
-        this.fileChoosedListener = fileChoosedListener;
-        setContentPane(contentPane);
-        setModal(true);
-        fileChooser.setCurrentDirectory(fileType.getRootDir());
-        fileChooser.removeChoosableFileFilter(fileChooser.getChoosableFileFilters()[0]);
-        fileChooser.addChoosableFileFilter(fileType.getFileFilter());
-        pack();
-
-        fileChooser.addActionListener(new ActionListener() {
+        addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (JFileChooser.CANCEL_SELECTION.equals(e.getActionCommand())) {
-                    dispose();
-                }
                 if (JFileChooser.APPROVE_SELECTION.equals(e.getActionCommand())) {
+                    if (!getSelectedFile().getName().endsWith(fileType.getFileFilter().getDescription())) {
+                        setSelectedFile(new File(getSelectedFile().getPath() + "." + fileType.getFileFilter().getDescription()));
+                    }
                     fileChoosedListener.actionPerformed(e);
-                    dispose();
                 }
             }
         });
