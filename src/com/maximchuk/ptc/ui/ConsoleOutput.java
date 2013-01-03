@@ -1,5 +1,7 @@
 package com.maximchuk.ptc.ui;
 
+import com.maximchuk.ptc.helper.UIHelper;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,6 +14,7 @@ public class ConsoleOutput extends JDialog {
 
     public ConsoleOutput() {
         setContentPane(contentPane);
+        UIHelper.setIcon(this);
         setTitle("Console output");
         setSize(800, 600);
 

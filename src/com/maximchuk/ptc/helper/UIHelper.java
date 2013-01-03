@@ -22,6 +22,10 @@ public class UIHelper {
     }
 
     public static String getAppTitle() {
-        return "Primefaces theme converter";
+        return "Primefaces theme converter (ver." + AppHelper.getVersion() +")";
+    }
+
+    public static void setIcon(Window window) {
+        window.setIconImage(Toolkit.getDefaultToolkit().createImage("res/img/icon.png"));
     }
 }

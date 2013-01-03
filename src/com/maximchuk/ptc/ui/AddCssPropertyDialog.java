@@ -2,6 +2,7 @@ package com.maximchuk.ptc.ui;
 
 import com.maximchuk.ptc.entity.CssPropertyEntity;
 import com.maximchuk.ptc.entity.CssPropertyEnum;
+import com.maximchuk.ptc.helper.UIHelper;
 import com.maximchuk.ptc.ui.table.CssPropertyTableModel;
 
 import javax.swing.*;
@@ -22,6 +23,7 @@ public class AddCssPropertyDialog extends JDialog {
     public AddCssPropertyDialog(final CssPropertyTableModel tableModel) {
         setSize(400, 200);
         setTitle("Add new css property");
+        UIHelper.setIcon(this);
 
         for (CssPropertyEnum type: CssPropertyEnum.values()) {
             if (!tableModel.isExistCssProperty(type)) {

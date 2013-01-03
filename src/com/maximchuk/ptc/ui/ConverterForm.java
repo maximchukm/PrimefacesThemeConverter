@@ -111,6 +111,7 @@ public class ConverterForm {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 300);
         frame.addWindowListener(windowListener);
+        UIHelper.setIcon(frame);
         frame.setVisible(true);
     }
 
