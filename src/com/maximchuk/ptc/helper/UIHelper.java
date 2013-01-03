@@ -1,5 +1,6 @@
 package com.maximchuk.ptc.helper;
 
+import javax.swing.*;
 import java.awt.*;
 
 /**
@@ -26,6 +27,6 @@ public class UIHelper {
     }
 
     public static void setIcon(Window window) {
-        window.setIconImage(Toolkit.getDefaultToolkit().createImage("res/img/icon.png"));
+        window.setIconImage(new ImageIcon(window.getClass().getResource("/com/maximchuk/ptc/ui/icon/icon.png")).getImage());
     }
 }
